@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/coze/Desktop/trade/server /Users/coze/Desktop/trade/src/components /Users/coze/Desktop/trade/src/lib /Users/coze/Desktop/trade/data)",
+      "Bash(npm install *)",
+      "Bash(which node *)",
+      "Read(//usr/local/bin/**)",
+      "Bash(find /usr /opt /Users/coze -name \"npm\" -type f 2>/dev/null | head -5; find /Users/coze/.nvm -name \"node\" -type f 2>/dev/null | head -3; ls /Users/coze/.nvm/versions/node/ 2>/dev/null)",
+      "Read(//usr/**)",
+      "Read(//Users/coze/**)",
+      "Read(//Users/coze/.nvm/versions/**)",
+      "Bash(ls /usr/local/bin/ 2>/dev/null | head -20; ls /opt/homebrew/bin/ 2>/dev/null | grep -E \"node|npm|yarn|bun\" | head -10)",
+      "Read(//opt/homebrew/**)",
+      "Bash(ls /opt/pmk/env/global/bin/ 2>/dev/null | head -20)",
+      "Read(//opt/pmk/env/global/**)",
+      "Bash(ls -la /opt/pmk/env/global/ 2>/dev/null; find /opt -name \"npm\" 2>/dev/null | head -5; find /usr -name \"npm\" 2>/dev/null | head -5)",
+      "Read(//opt/**)",
+      "Bash(sw_vers)",
+      "Read(//System/Volumes/Data/usr/local/**)",
+      "Bash(chmod +x /Users/coze/Desktop/trade/start.sh)",
+      "Bash(node -e ' *)",
+      "Bash(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh)",
+      "Bash(zsh)",
+      "Bash(bash)",
+      "Bash(bash -c 'export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; nvm install 20')",
+      "Bash(bash -c 'export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; npm install 2>&1')",
+      "Bash(bash -c 'export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; npm install recharts@3 2>&1 | tail -5')",
+      "Bash(bash -c 'export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; npm run dev')",
+      "Bash(curl -s http://localhost:3001/api/auth/status)",
+      "Bash(bash -c 'export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; node -e \"const r = require\\(\\\\\"recharts\\\\\"\\); console.log\\(\\\\\"recharts version:\\\\\", require\\(\\\\\"./node_modules/recharts/package.json\\\\\"\\).version\\)\"')",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(open http://localhost:5173)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "additionalDirectories": [
+      "/Users/coze/Desktop/trade"
+    ]
+  }
+}

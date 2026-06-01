@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply antialiased; }
+  body { @apply bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100; }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-ct text-white hover:bg-blue-500 active:bg-blue-600;
+  }
+  .btn-ghost {
+    @apply btn text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800;
+  }
+  .btn-danger {
+    @apply btn bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40;
+  }
+  .input {
+    @apply w-full px-3 py-2 text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-ct/50 focus:border-ct placeholder-gray-400 dark:placeholder-gray-500;
+  }
+  .label {
+    @apply block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1;
+  }
+  .badge-ct {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400;
+  }
+  .badge-crypto {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400;
+  }
+  .metric-label { @apply text-xs text-gray-500 dark:text-gray-400 mb-0.5; }
+  .metric-value { @apply text-lg font-semibold text-gray-900 dark:text-white; }
+  .positive { @apply text-emerald-600 dark:text-emerald-400; }
+  .negative { @apply text-red-500 dark:text-red-400; }
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 transition-colors;
+  }
+  .nav-link.active {
+    @apply bg-blue-50 dark:bg-blue-900/20 text-ct font-semibold;
+  }
+  /* Hide scrollbar on mobile nav */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* Recharts tooltip */
+.recharts-tooltip-wrapper { @apply !shadow-none; }
