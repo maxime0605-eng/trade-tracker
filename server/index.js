@@ -218,9 +218,10 @@ app.use((err, req, res, _next) => {
   res.status(500).json({ error: 'Erreur serveur' });
 });
 
-// Production: serve Vite build
-if (process.env.NODE_ENV === 'production') {
-  const distPath = path.join(__dirname, '..', 'dist');
+// Serve Vite build if dist/ exists
+const distPath = path.join(__dirname, '..', 'dist');
+const fs = require('fs');
+if (fs.existsSync(path.join(distPath, 'index.html'))) {
   app.use(express.static(distPath));
   app.get('*', (_req, res) => res.sendFile(path.join(distPath, 'index.html')));
 }
