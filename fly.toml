@@ -1,0 +1,32 @@
+# fly.toml — Trade Republic Tracker
+app = "trade-tracker"
+primary_region = "cdg"  # Paris
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  NODE_ENV = "production"
+  DB_PATH   = "/data/trade.db"
+  PORT      = "3001"
+
+[http_service]
+  internal_port = 3001
+  force_https   = true
+  auto_stop_machines  = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type       = "connections"
+    hard_limit = 25
+    soft_limit = 20
+
+[[mounts]]
+  source      = "trade_data"
+  destination = "/data"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
